@@ -13,5 +13,5 @@
 
 - The idea of a root component called App, at the top of the component tree of the application, is a strong convention in React.
 - The content of a React component usually needs to contain one root element, which in the App component is the div-element.
-  - The root element is stipulated, so <div> tags in the DOM tree can be made empty: <>
+  - The root element is stipulated, so \<div> tags in the DOM tree can be made empty: <>
   - An array of components is also a valid solution, but not wise or pretty.
