@@ -1,7 +1,7 @@
 # Notes
 
-### Part 1: React
-## Part 1a: Introduction to React
+## Part 1: React
+### Part 1a: Introduction to React
 
 - The code inside our functions is JSX, a syntax extension to JavaScript.
 - JSX is recommended to be used with React to describe what the UI should look like.
