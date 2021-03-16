@@ -32,6 +32,8 @@
   - The properties of an object are referenced by using the "dot" notation, or by using brackets.
   - Variables with whitespaces require bracket notation (in addition to quotation marks).
 - Objects in JavaScript can have methods of their own.
+  - More on object methods can be found here: https://fullstackopen.com/en/part1/java_script#object-methods-and-this
+  - Not an important topic on the course.
 
 #### Functions
 - Basic syntax of an arrow function:<br>
@@ -54,3 +56,18 @@
     `return (a + b) / 2`<br>
   `}`<br>
   `const result = average(2, 5)`<br>
+  
+#### Classes
+- ES6's `class` syntax simulates Java's object-oriented classes.<br>
+  `class Person {`<br>
+    `constructor(name, age) {`<br>
+      `this.name = name`<br>
+      `this.age = age`<br>
+    `}`<br>
+    `greet() {`<br>
+      `console.log('hello, my name is ' + this.name)`<br>
+    `}`<br>
+  `}`<br>
+  `const adam = new Person('Adam Ondra', 35)`<br>
+  `adam.greet()`
+  - Not used in React Hooks, but prevalent in older React and Node.js.
