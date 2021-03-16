@@ -32,6 +32,6 @@ See JavaScript-specific notes in javascript-notes.md
 - Node.js is a JavaScript runtime environment based on Google's Chrome V8 JavaScript engine and works practically anywhere - from servers to mobile phones.
 - When using Reach, techniques from functional programming are preferred.
   - The use of immutable data structures is characteristic to functional programming.
-  - Use concat() rather than push(), for example.
+  - Use `concat()` rather than `push()`, for example.<br>
+    `const t2 = t.concat(5);`
     - Creates a new array in which the content of the old array and the new item are both included.
-    - syntax: const t2 = t.concat(5);
