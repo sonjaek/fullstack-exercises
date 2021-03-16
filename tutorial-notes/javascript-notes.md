@@ -26,15 +26,17 @@
   ```
 
 #### Objects
-- One way of defining objects is using object literals:<br>
-  `const object = {`<br>
-    `name: {`<br>
-      `first: 'Sonja',`<br>
-      `last: 'Ek',`<br>
-    `},`<br>
-    `grades: [2, 3, 5, 3],`<br>
-    `department: 'Stanford University',`<br>
-  `}`<br>
+- One way of defining objects is using object literals:
+  ```
+  const object = {
+    name: {
+      first: 'Sonja',
+      last: 'Ek',
+    },
+    grades: [2, 3, 5, 3],
+    department: 'Stanford University',
+  }
+  ```
   - The properties of an object are referenced by using the "dot" notation, or by using brackets.
   - Variables with whitespaces require bracket notation (in addition to quotation marks).
 - Objects in JavaScript can have methods of their own.
@@ -42,38 +44,50 @@
   - Not an important topic on the course.
 
 #### Functions
-- Basic syntax of an arrow function:<br>
-  `const arFun = (argument, another) => {`<br>
-    `console.log(argument)`<br>
-    `return another`<br>
-  `}`<br>
+- Basic syntax of an arrow function:
+  ```
+  const arFun = (argument, another) => {
+    console.log(argument)
+    return another
+  }
+  ```
 - Exclude parentheses when there's only one parameter:<br>
-  `const arFun2 = p => {`<br>
-    `console.log(p)`<br>
-    `return p*p`<br>
-  `}`<br>
-- Exclude even more stuff if the function only returns a value:<br>
-  `const arFun3 = p = p*p`<br>
-- The shortest form is handy with mapping:<br>
-  `const t = [1, 2, 3]`<br>
-  `const tSquared = t.map(p => p * p)`  // tSquared is now [1, 4, 9]<br>
-- A function doesn't need a name when it's defined using a function expression:<br>
-  `const average = function(a, b) {`<br>
-    `return (a + b) / 2`<br>
-  `}`<br>
-  `const result = average(2, 5)`<br>
+  ```
+  const arFun2 = p => {
+    console.log(p)
+    return p*p
+  }
+  ```
+- Exclude even more stuff if the function only returns a value:
+  ```
+  const arFun3 = p = p*p
+  ```
+- The shortest form is handy with mapping:
+  ```
+  const t = [1, 2, 3]
+  const tSquared = t.map(p => p * p)  // tSquared is now [1, 4, 9]
+  ```
+- A function doesn't need a name when it's defined using a function expression:
+  ```
+  const average = function(a, b) {
+    return (a + b) / 2
+  }
+  const result = average(2, 5)
+  ```
   
 #### Classes
-- ES6's `class` syntax simulates Java's object-oriented classes.<br>
-  `class Person {`<br>
-    `constructor(name, age) {`<br>
-      `this.name = name`<br>
-      `this.age = age`<br>
-    `}`<br>
-    `greet() {`<br>
-      `console.log('hello, my name is ' + this.name)`<br>
-    `}`<br>
-  `}`<br>
-  `const adam = new Person('Adam Ondra', 35)`<br>
-  `adam.greet()`
+- ES6's `class` syntax simulates Java's object-oriented classes.
+  ```
+  class Person {
+    constructor(name, age) {
+      this.name = name
+      this.age = age
+    }
+    greet() {
+      console.log('hello, my name is ' + this.name)
+    }
+  }
+  const adam = new Person('Adam Ondra', 35)
+  adam.greet()
+  ```
   - Not used in React Hooks, but prevalent in older React and Node.js.
