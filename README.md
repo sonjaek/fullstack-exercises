@@ -4,12 +4,12 @@ The course serves as an introduction to modern web application development with 
 
 Link to the materials: https://fullstackopen.com/en/
 
-### Exercises done per round
+### Completed Exercises
 
 | Part  | Exercises|
 | ---   | ---     |
 | 0     | 6/6     |
-| 1     | 0/14   |
+| 1     | 5/14   |
 | 2     | 0/20   |
 | 3     | 0/20   |
 | 4     | 0/21   |
