@@ -54,7 +54,7 @@ const App = () => {
       }
     ]
   }
-
+  // Pass objects to components directly as arrays instead of props:
   return (
     <div>
       <Header course={course.name}/>
