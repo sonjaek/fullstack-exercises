@@ -3,7 +3,12 @@
 ## Part 1: React
 ### Part 1a: Introduction to React
 
-- The code inside our functions is JSX, a syntax extension to JavaScript.
+- Create and run a React app through terminal:<br>
+  `npx create-react-app [foldername]`<br>
+  `cd [foldername]`<br>
+  `npm start`
+
+- The code inside the functions in the tutorial code is JSX, a syntax extension to JavaScript.
   - JSX is recommended to be used with React to describe what the UI should look like.
   - In practice, JSX is much like HTML with the distinction that with JSX you can easily embed dynamic content by writing appropriate JavaScript within curly braces.
   - The idea of JSX is quite similar to many templating languages, such as Thymeleaf used along with Java Spring, which are used on servers.
