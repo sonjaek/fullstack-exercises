@@ -2,20 +2,16 @@ import React from 'react'
 
 // React component names must be capitalized:
 const Hello = (props) => {
+  const { name, age } = props
   // The logic for guessing the birth year is separated into its ofn function that is
   // called when the component is rendered:
-  const bornYear = () => {
-    const yearNow = new Date().getFullYear()
-    return yearNow - props.age
-  }
-  // The age doesn't have to be passed as a parameter because the function can 
-  // directly access all props that are passed to the component (Hello in this case).
+  const bornYear = () => new Date().getFullYear() - age 
   // bornYear() is actually a function inside function, which is normal in JavaScript.
 
   return (
     <div>
       <p>
-        Hello {props.name}, you are {props.age} years old
+        Hello {name}, you are {age} years old
       </p>
       <p>
         So you were probably born in {bornYear()}
