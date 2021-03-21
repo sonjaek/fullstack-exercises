@@ -1,28 +1,36 @@
 import React, { useState } from 'react' // useState is a function
 
 const App = () => {
-  const [ counter, setCounter ] = useState(0)
+  const [clicks, setClicks] = useState({
+    left: 0, right: 0
+  })
 
-  const increaseByOne = () => setCounter(counter + 1)
-  const decreaseByOne = () => setCounter(counter - 1)
-  const setToZero = () => setCounter(0)
+  const handleLeftClick = () =>
+    setClicks({ ...clicks, left: clicks.left + 1 })
+
+  const handleRightClick = () =>
+    setClicks({ ...clicks, right: clicks.right + 1 })
+
+  /*
+  It's forbidden in React to mutate state directly. You can't do this:
+  const handleLeftClick = () => {
+    clicks.left++
+    setClicks(clicks)
+  }
+  */
 
   return (
     <div>
-      <Display counter={counter}/>
-      <Button handleClick={increaseByOne} text='plus'/>
-      <Button handleClick={setToZero} text='zero'/>
-      <Button handleClick={decreaseByOne} text='minus'/>
+      {clicks.left}
+      <button onClick={handleLeftClick}>left</button>
+      <button onClick={handleRightClick}>right</button>
+      {clicks.right}
     </div>
   )
 }
 
-const Display = ({ counter }) => <div>{counter}</div>
-
-const Button = ({ handleClick, text }) => (
-    <button onClick={handleClick}>
-      {text}
-    </button>
-  )
-
 export default App
+
+/*
+Storing all of the state in a single state object is a bad choice for this particular application; there's no apparent benefit and the resulting application is a lot more complex. In this case storing the click counters into separate pieces of state is a far more suitable choice.
+*/
