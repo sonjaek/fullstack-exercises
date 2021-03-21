@@ -19,12 +19,10 @@ const App = () => {
 
 const Display = ({ counter }) => <div>{counter}</div>
 
-const Button = ({ handleClick, text }) => {
-  return (
+const Button = ({ handleClick, text }) => (
     <button onClick={handleClick}>
       {text}
     </button>
   )
-}
 
 export default App
