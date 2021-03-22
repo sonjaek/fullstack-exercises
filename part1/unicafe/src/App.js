@@ -6,7 +6,7 @@ const Button = ({ handleClick, text }) => (
   </button>
 )
 
-const Display = ({ title, value }) => <div>{title} {value}</div>
+const Statistic = ({ text, value }) => <div>{text} {value}</div>
 
 const Statistics = ({good, neutral, bad, all, average, positive}) => {
   if (all === 0) {
@@ -20,12 +20,12 @@ const Statistics = ({good, neutral, bad, all, average, positive}) => {
     return (
       <div class='statistics-area'>
         <h2>statistics</h2>
-        <Display title='good' value={good} />
-        <Display title='neutral' value={neutral} />
-        <Display title='bad' value={bad} />
-        <Display title='all' value={all} />
-        <Display title='average' value={average} />
-        <Display title='positive' value={positive} />
+        <Statistic text='good' value={good} />
+        <Statistic text='neutral' value={neutral} />
+        <Statistic text='bad' value={bad} />
+        <Statistic text='all' value={all} />
+        <Statistic text='average' value={average} />
+        <Statistic text='positive' value={positive} />
       </div>
     )
   }
