@@ -9,17 +9,27 @@ const Button = ({ handleClick, text }) => (
 const Display = ({ title, value }) => <div>{title} {value}</div>
 
 const Statistics = ({good, neutral, bad, all, average, positive}) => {
-  return (
-  <div id='statistics-area'>
-    <h2>statistics</h2>
-    <Display title='good' value={good} />
-    <Display title='neutral' value={neutral} />
-    <Display title='bad' value={bad} />
-    <Display title='all' value={all} />
-    <Display title='average' value={average} />
-    <Display title='positive' value={positive} />
-  </div>
-)}
+  if (all === 0) {
+    return (
+      <div class='statistics-area'>
+        <h2>statistics</h2>
+        <p>No feedback given</p>
+      </div>
+    )
+  } else {
+    return (
+      <div class='statistics-area'>
+        <h2>statistics</h2>
+        <Display title='good' value={good} />
+        <Display title='neutral' value={neutral} />
+        <Display title='bad' value={bad} />
+        <Display title='all' value={all} />
+        <Display title='average' value={average} />
+        <Display title='positive' value={positive} />
+      </div>
+    )
+  }
+}
 
 const App = () => {
   const [good, setGood] = useState(0)
@@ -27,7 +37,8 @@ const App = () => {
   const [bad, setBad] = useState(0)
   const [all, setAll] = useState(0)
 
-  // Avoid NaN-values in the beginning (not sure if this is a smart way):
+  // Avoid NaN-values in the beginning (not sure if this is a smart way)
+  // This is not a must-have when statistics are hidden in the beginning
   let average;
   let positive;
   if (all !== 0) {
@@ -63,7 +74,6 @@ const App = () => {
         <Statistics good={good} neutral={neutral} bad={bad} all={all} 
         average={average} positive={positive} />
       </div>
-
     </div>
   )
 }
