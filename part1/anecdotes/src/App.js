@@ -19,7 +19,7 @@ const App = () => {
   const [selected, setSelected] = useState(0)
 
   const handleClick = () => {
-    setSelected(Math.floor(Math.random() * 5) + 1)
+    setSelected(Math.floor(Math.random() * 5 - 1) + 1)
   }
 
   return (
