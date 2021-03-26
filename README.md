@@ -9,7 +9,7 @@ Link to the materials: https://fullstackopen.com/en/
 | Part  | Exercises|
 | ---   | ---     |
 | 0     | 6/6     |
-| 1     | 5/14   |
+| 1     | 14/14   |
 | 2     | 0/20   |
 | 3     | 0/20   |
 | 4     | 0/21   |
