@@ -74,6 +74,9 @@
   }
   const result = average(2, 5)
   ```
+
+- The functions in JavaScript are, in reality, also **closures**.
+  - They have access to variables that are defined outside of the function!
   
 #### Classes
 - ES6's `class` syntax simulates Java's object-oriented classes.
