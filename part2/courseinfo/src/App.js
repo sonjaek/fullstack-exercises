@@ -9,22 +9,21 @@ const Header = ({ name }) => {
   );
 }
 
-const Part = ({ content }) => {
+const Part = ({ part }) => {
   return (
     <div>
       <p>
-        {content.name} {content.exercises}
+        {part.name} {part.exercises}
       </p>
     </div>
   );
 }
 
-const Content = ({ content }) => {
+const Content = ({ parts }) => {
   return (
     <div>
-      <Part content={content[0]} />
-      <Part content={content[1]} />
-      <Part content={content[2]} />
+      {parts.map(part =>
+        <Part key={parts.id} part={part} />)}
     </div>
   );
 }
@@ -33,7 +32,7 @@ const Course = ({ course }) => {
   return (
     <div>
       <Header name={course.name} />
-      <Content content={course.parts} />
+      <Content parts={course.parts} />
     </div>
   )
 }
