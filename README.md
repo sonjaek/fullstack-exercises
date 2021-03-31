@@ -9,12 +9,15 @@ Link to the materials: https://fullstackopen.com/en/
 | Part | Topics | Exercises|
 | --- | --- | ---     |
 | 0   | DOM, AJAX & HTTP protocol | 6/6     |
-| 1   | React | 14/14   |
-| 2   | Effect-hooks & Promises  | 2/20   |
+| 1   | JavaScript & React | 14/14   |
+| 2   | HTML forms & CSS in React  | 5/20   |
 | 3   | Node.js, Express, MongoDB & ESLint | 0/20   |
 | 4   | Backend testing, Token authentication  | 0/21   |
 | 5   | Front-end testing & proptypes  | 0/21   |        
 | 6   | Redux  | 0/21   |        
 | 7   | React router, Webpack  | 0/20   |        
-| 8   | GraphQL  | 0/26   |        
-| __Total__ | __22/171__ |        
+| 8   | GraphQL  | 0/26   |    
+| 9   | TypeScript  | 0/27   |    
+| 10  | React Native  | 0/27   |  
+| 11  | CI/CD  | 0/22   |    
+| __Total__ | __22/245__ |        
