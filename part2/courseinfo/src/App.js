@@ -29,22 +29,30 @@ const Content = ({ parts }) => {
   );
 }
 
+const Total = ({ parts }) => {
+  const sumUp = (sum, partialSum) => sum + partialSum
+  return (
+    <div>
+      total of 
+      &nbsp;
+        {parts.map(part => part.exercises)
+              .reduce(sumUp)
+        }
+      &nbsp;
+      exercises
+    </div>
+  );
+}
+
 const Course = ({ course }) => {
   return (
     <div>
       <Header name={course.name} />
       <Content parts={course.parts} />
+      <Total parts={course.parts} />
     </div>
   )
 }
-
-// const Total = (props) => {
-//   return (
-//     <div>
-//       <p>Number of exercises {props.total[0].exercises + props.total[1].exercises + props.total[2].exercises}</p>
-//     </div>
-//   );
-// }
 
 const App = () => {
   const course = {
