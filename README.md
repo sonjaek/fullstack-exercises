@@ -20,4 +20,4 @@ Link to the materials: https://fullstackopen.com/en/
 | 9   | TypeScript  | 0/27   |    
 | 10  | React Native  | 0/27   |  
 | 11  | CI/CD  | 0/22   |    
-| | | __22/245__ |        
+| | | __30/245__ |        
