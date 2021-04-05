@@ -1,19 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Filter from './components/Filter'
-
-const Countries = ({ data, filter }) => {
-  return (
-    <div>
-      {data.filter(country => country.name
-                    .toLowerCase()
-                    .includes(filter.toLowerCase()))
-            .map(country =>
-              <p>{country.name}</p>)
-        }
-    </div>
-  )
-}
+import Display from './components/Display'
 
 const App = () => {
   const [ data, setData ] = useState([]) 
@@ -32,7 +20,7 @@ const App = () => {
   return (
     <div>
       <Filter filter={filter} setFilter={setFilter} />
-      <Countries data={data} filter={filter} />
+      <Display data={data} filter={filter} />
     </div>
   )
 }
