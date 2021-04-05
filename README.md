@@ -20,4 +20,4 @@ The course serves as an introduction to modern web application development with 
 | 9   | TypeScript  | 0/27   |    
 | 10  | React Native  | 0/27   |  
 | 11  | CI/CD  | 0/22   |    
-| | | __30/245__ |        
+| | | __32/245__ |        
