@@ -10,7 +10,7 @@ Link to the materials: https://fullstackopen.com/en/
 | --- | --- | ---     |
 | 0   | DOM, AJAX & HTTP protocol | 6/6     |
 | 1   | JavaScript & React | 14/14   |
-| 2   | HTML forms & CSS in React  | 10/20   |
+| 2   | Promises & Effect Hooks | 11/20   |
 | 3   | Node.js, Express, MongoDB & ESLint | 0/20   |
 | 4   | Backend testing, Token authentication  | 0/21   |
 | 5   | Front-end testing & proptypes  | 0/21   |        
