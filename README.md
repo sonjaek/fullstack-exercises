@@ -9,7 +9,7 @@ Link to the materials: https://fullstackopen.com/en/
 | Part | Topics | Exercises|
 | --- | --- | ---     |
 | 0   | DOM, AJAX & HTTP protocol | 6/6     |
-| 1   | JavaScript & React | 14/14   |
+| 1   | React Fundamentals | 14/14   |
 | 2   | Promises & Effect Hooks | 11/20   |
 | 3   | Node.js, Express, MongoDB & ESLint | 0/20   |
 | 4   | Backend testing, Token authentication  | 0/21   |
