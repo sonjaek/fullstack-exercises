@@ -27,31 +27,40 @@ const Weather = ({ capital }) => {
   const [ weather, setWeather ] = useState({name : ''})
 
   const getWeatherHook = () => {
+    let unmounted = false
+
     const params = {
       access_key: api_key,
       query: capital
     }
+
     axios
       .get('http://api.weatherstack.com/current', {params})
       .then(response => {
-        if ('current' in response.data) {
-          setWeather ( { name : params.query, weather : response.data })
-        } else {
-          setWeather({name : ''})
-          console.log('Cannot retrieve weather', response.data)
+        if (!unmounted) {
+          if ('current' in response.data) {
+            setWeather ( { name : params.query, weather : response.data })
+          } else {
+            setWeather({name : ''})
+            console.log('Cannot retrieve weather', response.data)
+          }
         }
-        })
+      })
       .catch(error => {
-        setWeather({name : ''})
-        console.log(error);
-      });
+        if (!unmounted) {
+          setWeather({name : ''})
+          console.log(error)
+        }
+      })
+    return () => { unmounted = true }
   }
 
-  useEffect(getWeatherHook, [capital]);
+  useEffect(getWeatherHook, [capital])
 
   return (
     <div id="weather-display">
-      {weather.name !== '' && weather.weather ? <WeatherDetail weather={weather} /> : ''}
+      {weather.name !== '' && weather.weather ? 
+      <WeatherDetail weather={weather} /> : ''}
     </div>
   )
 }
