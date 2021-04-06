@@ -1,4 +1,4 @@
-This repository contains solutions to the massive open online course **Full Stack Open** (2021) by University of Helsinki.
+This repository contains solutions to challenges given on the MOOC **Full Stack Open** (2021) by University of Helsinki.
 
 The course serves as an introduction to modern web application development with JavaScript. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
 
@@ -10,7 +10,7 @@ The course serves as an introduction to modern web application development with 
 | --- | --- | ---     |
 | 0   | DOM, AJAX & HTTP protocol | 6/6     |
 | 1   | React Fundamentals | 14/14   |
-| 2   | Promises & Effect Hooks | 12/20   |
+| 2   | Promises & Effect Hooks | 14/20   |
 | 3   | Node.js, Express, MongoDB & ESLint | 0/20   |
 | 4   | Backend testing, Token authentication  | 0/21   |
 | 5   | Front-end testing & proptypes  | 0/21   |        
