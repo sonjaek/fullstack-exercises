@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div>
       <Filter filter={filter} setFilter={setFilter} />
-      <Display data={data} filter={filter} />
+      <Display data={data} filter={filter} setFilter={setFilter} />
     </div>
   )
 }
