@@ -1,20 +1,25 @@
 import React from 'react'
 import Countries from './Countries'
 import DetailedCountryInfo from './DetailedCountryInfo'
+import Weather from './Weather'
 
-const Display = ({ data, filter, setFilter }) => {
-  const countries = data.filter(country => country.name
+const Display = ({ countryData, filter, setFilter }) => {
+  const countries = countryData.filter(country => country.name
                     .toLowerCase()
                     .includes(filter.toLowerCase()))
                     
   if (countries.length > 10) {
-    return <div>Too many matches, specify another filter</div>
+    return <p>Too many matches, specify another filter</p>
   } else if (countries.length > 1) {
-    return <Countries data={data} filter={filter} setFilter={setFilter} />
+    return <Countries countryData={countryData} filter={filter} setFilter={setFilter} />
   } else if (countries.length === 1) {
-    return <DetailedCountryInfo countryData={countries[0]} />
+    return (
+    <div>
+      <DetailedCountryInfo countryData={countries[0]} />
+      <Weather capital={countries[0].capital} />
+    </div>
+    )
   } else {
-    console.log('No data available')
     return <p>No data available</p>
   }
 }

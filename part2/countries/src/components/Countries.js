@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CountryName = ({ name, setFilter }) => {
-  console.log(typeof setFilter)
   const handleClick = () => setFilter(name)
 
   return (
@@ -12,11 +11,11 @@ const CountryName = ({ name, setFilter }) => {
   )
 }
 
-const Countries = ({ data, filter, setFilter }) => {
+const Countries = ({ countryData, filter, setFilter }) => {
 
   return (
     <div>
-      {data.filter(country => country.name
+      {countryData.filter(country => country.name
                     .toLowerCase()
                     .includes(filter.toLowerCase()))
             .map(country =>

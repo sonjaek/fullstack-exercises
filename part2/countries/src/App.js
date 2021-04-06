@@ -4,23 +4,22 @@ import Filter from './components/Filter'
 import Display from './components/Display'
 
 const App = () => {
-  const [ data, setData ] = useState([]) 
+  const [ countryData, setCountryData ] = useState([]) 
   const [ filter, setFilter ] = useState('')
 
-  useEffect(() => {
-    console.log('effect')
+  const getCountriesHook = () => {
     axios
       .get('https://restcountries.eu/rest/v2/all')
       .then(response => {
-        console.log('promise fulfilled')
-        setData(response.data)
+        setCountryData(response.data)
       })
-  }, [])
+  }
+  useEffect(getCountriesHook, []);
 
   return (
     <div>
       <Filter filter={filter} setFilter={setFilter} />
-      <Display data={data} filter={filter} setFilter={setFilter} />
+      <Display countryData={countryData} filter={filter} setFilter={setFilter} />
     </div>
   )
 }
