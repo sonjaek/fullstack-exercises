@@ -4,6 +4,8 @@ The course serves as an introduction to modern web application development with 
 
 [Link to the materials](https://fullstackopen.com/en/)
 
+[![wakatime](https://wakatime.com/badge/github/iosonja/fullstack-exercises.svg)](https://wakatime.com/badge/github/iosonja/fullstack-exercises)
+
 ### Completed Exercises
 
 | Part | Topics | Exercises|
