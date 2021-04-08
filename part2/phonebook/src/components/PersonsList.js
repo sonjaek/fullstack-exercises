@@ -1,7 +1,7 @@
 import React from 'react'
 import Person from './Person'
 
-const Persons = ({ persons, filter }) => {
+const PersonsList = ({ persons, filter }) => {
   return (
     <div>
       {persons.filter(person => person.name
@@ -14,4 +14,4 @@ const Persons = ({ persons, filter }) => {
   )
 }
 
-export default Persons
+export default PersonsList
