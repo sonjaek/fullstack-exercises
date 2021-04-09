@@ -10,10 +10,17 @@ const getAll = () => {
     const request = axios.post(baseUrl, newObject)
     return request.then(response => response.data)
   }
+
+  const remove = id => {
+    return axios.delete(`${baseUrl}/${id}`)
+  }
   
 //   const update = (id, newObject) => {
 //     const request = axios.put(`${baseUrl}/${id}`, newObject)
 //     return request.then(response => response.data)
 //   }
 
-export default { getAll, create }
+// The extra step below stops a warning
+const axiosInterface = { getAll, create, remove }
+
+export default axiosInterface;

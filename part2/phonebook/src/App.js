@@ -13,6 +13,9 @@ const App = () => {
       .getAll()
       .then(initialPersons => {
         setPersons(initialPersons)
+      })  
+      .catch(error => {
+        console.log('fail')
       })
   }, [])
 
@@ -23,7 +26,7 @@ const App = () => {
       <h3>Add new contact</h3>
       <PersonForm persons={persons} setPersons={setPersons} />
       <h3>Numbers</h3>
-      <PersonsList persons={persons} filter={filter} />
+      <PersonsList persons={persons} setPersons={setPersons} filter={filter} />
     </div>
   )
 }

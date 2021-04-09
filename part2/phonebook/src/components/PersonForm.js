@@ -24,6 +24,7 @@ const PersonForm = ({ persons, setPersons }) => {
         name: newName,
         number: newNumber
       }
+      
       personsService
         .create(personObject)
         .then(returnedPersons => {
