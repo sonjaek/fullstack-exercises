@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import personsService from '../services/persons'
 
-const PersonForm = ({ persons, setPersons }) => {
+const PersonForm = ({ persons, setPersons, setMessage }) => {
   const [ newName, setNewName ] = useState('')
   const [ newNumber, setNewNumber ] = useState('')
 
@@ -28,8 +28,18 @@ const PersonForm = ({ persons, setPersons }) => {
           .then(updated => {
             setPersons(persons.filter(p => p.name !== newName).concat(updated))
           })
-          .catch(error => {
+          .then(() => {
+            setMessage(`Updated the number for ${newName}`)
+            setTimeout(() => {
+              setMessage(null)
+            }, 5000)
+          })
+          .catch((error) => {
             console.log("Error in updating the number")
+            setMessage(`Could not update the number for ${newName}`)
+            setTimeout(() => {
+              setMessage(null)
+            }, 5000)
           })
       }
     } else {
@@ -44,6 +54,12 @@ const PersonForm = ({ persons, setPersons }) => {
           setPersons(persons.concat(returnedPersons))
           setNewName('')
           setNewNumber('')
+        })
+        .then(() => {
+          setMessage(`Added ${newName}`)
+          setTimeout(() => {
+            setMessage(null)
+          }, 5000)
         })
     }
   }
