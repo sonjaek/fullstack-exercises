@@ -1,7 +1,7 @@
 import React from 'react'
 import Person from './Person'
 
-const PersonsList = ({ persons, setPersons, filter }) => {
+const PersonsList = ({ persons, setPersons, filter, setMessage, setMessageType }) => {
 
   return (
     <div>
@@ -14,6 +14,8 @@ const PersonsList = ({ persons, setPersons, filter }) => {
                   person={person}
                   persons={persons}
                   setPersons={setPersons}
+                  setMessage={setMessage}
+                  setMessageType={setMessageType}
                 />
       )}
     </div>
