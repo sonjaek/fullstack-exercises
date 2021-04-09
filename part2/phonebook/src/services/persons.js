@@ -15,12 +15,12 @@ const getAll = () => {
     return axios.delete(`${baseUrl}/${id}`)
   }
   
-//   const update = (id, newObject) => {
-//     const request = axios.put(`${baseUrl}/${id}`, newObject)
-//     return request.then(response => response.data)
-//   }
+  const update = updatedObject => {
+    const request = axios.put(`${baseUrl}/${updatedObject.id}`, updatedObject)
+    return request.then(response => response.data)
+  }
 
 // The extra step below stops a warning
-const axiosInterface = { getAll, create, remove }
+const axiosInterface = { getAll, create, remove, update }
 
 export default axiosInterface;

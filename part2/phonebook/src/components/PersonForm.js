@@ -18,13 +18,26 @@ const PersonForm = ({ persons, setPersons }) => {
     event.preventDefault()
 
     if (persons.map(person => person.name).includes(newName)) {
-      window.alert(`${newName} is already added to phonebook`)
+      const existingPerson = persons.find(p => p.name === newName)
+
+      if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)) {
+        existingPerson.number = newNumber
+
+        personsService
+          .update(existingPerson)
+          .then(updated => {
+            setPersons(persons.filter(p => p.name !== newName).concat(updated))
+          })
+          .catch(error => {
+            console.log("Error in updating the number")
+          })
+      }
     } else {
       const personObject = {
         name: newName,
         number: newNumber
       }
-      
+
       personsService
         .create(personObject)
         .then(returnedPersons => {
