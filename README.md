@@ -11,7 +11,7 @@ The course serves as an introduction to modern web application development with 
 | 0   | DOM, AJAX & HTTP protocol | 6/6     |
 | 1   | React Fundamentals | 14/14   |
 | 2   | Promises & Effect Hooks | 20/20   |
-| 3   | Node.js, Express, MongoDB & ESLint | 0/20   |
+| 3   | Node.js, Express, MongoDB & ESLint | 0/22   |
 | 4   | Backend testing, Token authentication  | 0/21   |
 | 5   | Front-end testing & proptypes  | 0/21   |        
 | 6   | Redux  | 0/21   |        
@@ -20,4 +20,4 @@ The course serves as an introduction to modern web application development with 
 | 9   | TypeScript  | 0/27   |    
 | 10  | React Native  | 0/27   |  
 | 11  | CI/CD  | 0/22   |    
-| | | __40/245__ |        
+| | | __40/247__ |        
