@@ -24,6 +24,8 @@ yarn-error.log*
 
 # please work
 tutorial-notes/part1/node_modules/
+tutorial-notes/part2/node_modules/
+tutorial-notes/part3/node_modules/
 /part1/*/node_modules
 /part2/*/node_modules
 /part3/*/node_modules
