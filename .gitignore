@@ -26,3 +26,4 @@ yarn-error.log*
 tutorial-notes/part1/node_modules/
 /part1/*/node_modules
 /part2/*/node_modules
+/part3/*/node_modules
