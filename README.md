@@ -1,6 +1,6 @@
-# Full Stack Open 2021 [![wakatime](https://wakatime.com/badge/github/iosonja/fullstack-exercises.svg)](https://wakatime.com/badge/github/iosonja/fullstack-exercises)
+# Full Stack Open
 
-This repository contains solutions to challenges given on the course [**Full Stack Open**](https://fullstackopen.com/en/) (2021) by University of Helsinki.
+This repository contains solutions to challenges given on the course [**Full Stack Open**](https://fullstackopen.com/en/) by University of Helsinki.
 
 The course serves as an introduction to modern web application development with JavaScript. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
 
