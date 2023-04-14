@@ -27,6 +27,17 @@ app.get('/api/notes', (req, res) => {
   res.json(notes) // Express sets Content-Type to be application/json
 })
 
+app.get('/api/notes/:id', (request, response) => {
+  const id = Number(request.params.id)
+  const note = notes.find(note => note.id === id)
+
+  if (note) {
+    response.json(note)
+  } else {
+    response.status(404).end() // .end() = return no data
+  }
+})
+
 const PORT = 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
