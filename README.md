@@ -4,8 +4,6 @@ This repository contains solutions to challenges given on the course [**Full Sta
 
 The course serves as an introduction to modern web application development with JavaScript. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
 
-**Part 3** is located in a [separate repository](https://github.com/iosonja/nodejs-exercises).
-
 ### Completed Exercises
 
 | Part | Topics                                 | Exercises  | Hours Spent |
